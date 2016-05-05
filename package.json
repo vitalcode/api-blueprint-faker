@@ -1,16 +1,11 @@
 {
-  "name": "api-mock",
-  "version": "0.3.2",
-  "description": "A mock server generated from your API Blueprint.",
-  "author": "Evan Cordell <cordell.evan@gmail.com>",
-  "main": "lib/api-mock.js",
+  "name": "api-blueprint-faker",
+  "version": "0.1.3",
+  "description": "Generates mock server from your API blueprint specification. Uses json-schema-faker to generate mock data.",
+  "author": "Vitaliy Kuznetsov <vitaliy.kuznetsov@yahoo.co.uk>",
+  "main": "bin/api-blueprint-faker.js",
   "bin": {
-    "api-mock": "bin/api-mock"
-  },
-  "scripts": {
-    "test": "scripts/test",
-    "build": "scripts/build",
-    "prepublish": "scripts/prepublish"
+    "api-blueprint-faker": "bin/api-blueprint-faker.js"
   },
   "dependencies": {
     "express": "~3.4.7",
@@ -20,34 +15,20 @@
     "uri-template": "~1.0.0",
     "winston": "~2.1.1"
   },
-  "devDependencies": {
-    "coffee-script": "1.6.3",
-    "coffee-errors": "~0.8.4",
-    "mocha": "1.17.0",
-    "chai": "~1.9.0",
-    "coffee-coverage": "0.4.1",
-    "jscoverage": "0.3.8",
-    "coveralls": "~2.8.0",
-    "mocha-lcov-reporter": "0.0.1",
-    "codo": "2.0.3",
-    "sinon": "~1.9.0",
-    "nock": "~0.27.1",
-    "proxyquire": "~1.0.1",
-    "supertest": "~0.13.0"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/localmed/api-mock"
+    "url": "https://github.com/vitalcode/api-faker"
   },
   "keywords": [
     "api",
-    "test",
-    "testing",
-    "documenation",
-    "integration",
-    "acceptance",
+    "blueprint",
+    "rest",
     "server",
-    "stub"
+    "stub",
+    "mock",
+    "faker",
+    "json",
+    "schema"
   ],
   "license": "MIT",
   "engine": "node >= 4.0"

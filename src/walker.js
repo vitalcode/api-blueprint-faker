@@ -31,7 +31,7 @@ walker = function(app, resourceGroups) {
       }
 
       //TODO
-      var mockResponse = JSON.stringify(jsf(JSON.parse(response.schema)));
+      var mockResponse = response.schema ? JSON.stringify(jsf(JSON.parse(response.schema))): '';
 
       res.setHeader('Content-Length', Buffer.byteLength(mockResponse));
       return res.send(response.status, mockResponse);

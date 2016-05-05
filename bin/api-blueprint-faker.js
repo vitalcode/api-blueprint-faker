@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 var optimist = require('optimist');
 var winston = require('winston');
-var parsePackageJson = require('../lib/parse-package-json');
+var parsePackageJson = require('./../src/parse-package-json');
 var path = require('path');
-var ApiFaker = require('../lib/api-faker');
+var ApiFaker = require('./../src/api-faker');
 
 var version = parsePackageJson(path.join(__dirname, '../package.json'));
 

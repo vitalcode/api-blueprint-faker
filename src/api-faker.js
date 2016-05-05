@@ -53,7 +53,9 @@ ApiFaker = (function () {
           throw err;
         }
         var resourceGroups = [];
-        filenames.forEach(function (filename) {
+        filenames
+          .filter(function (fileName) {return fileName.match(/\.(apib|md)$/i)})
+          .forEach(function (filename) {
           fs.readFile(dirname + filename, 'utf-8', function (err, content) {
             if (err) {
               throw err;
@@ -68,7 +70,7 @@ ApiFaker = (function () {
               var ast_json = result.ast;
               resourceGroups.push(ast_json['resourceGroups'][0])
 
-              if (resourceGroups.length === 2) {
+              if (resourceGroups.length === 1) {
                 try {
                   walker(app, resourceGroups);
                 } catch (_error) {
